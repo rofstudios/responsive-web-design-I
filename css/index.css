@@ -1,3 +1,541 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 
+/*============= Your code starts here! *====================== This is CSS code for MAIN page====================/
+/*===============GLOBAL=============================*/
+/*
+body{
+    margin: 0 auto;
+    width: 1000px;
+}
+*/
+/*====================nav bar=======================*/
+
+.topTitle{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding: 30px;
+
+    /* old code-------------------
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: fixed;
+*/
+}
+
+.logo{
+    padding-right: 20%;
+}
+
+nav a {
+    color: dimgrey;
+    text-decoration: none;
+
+    /* old code---------------------
+    margin: 15px;
+    padding: 2px 15px 2px 15px;
+    color: dimgrey;
+    border: 2px solid black;
+    border-radius: 25px;
+    text-decoration: none;
+    background-color: aqua;
+    
+    margin: 0 3.4%;
+    text-decoration: none;
+    color: dimgrey;
+    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 25px;
+*/
+}
+
+/*Definitely wanted to redo it and make every link
+individual so the animation is not overtaking the
+whole width but decided to not over do it for now.
+It also does look better without the resizing down, but left it like that for this one.*/
+
+/*
+nav a:hover{
+    animation-name: fancy;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+    padding: 15px;
+}
+
+@keyframes fancy{
+     0%{
+        background-color: #F87B99;
+        color:white;
+        padding: 15px;
+  }
+    50%{
+        background-color: skyblue;
+        color: pink;
+        padding: 10px;
+  }
+    90%{
+        background-color: pink;
+        color: blue;
+        padding: 5px;
+
+    }
+    100%{
+        background-color: #F87B99;
+        color: whitesmoke;
+        padding: 3px;
+
+  }
+}
+nav img{
+    margin: 2%;
+    vertical-align: middle;
+}
+*/
+
+/*================header logo main section==========*/
+header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+
+    /* old code----------------
+    width: 100%;ß
+    display: -block;
+    padding-top: 100px;
+*/
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Bangers', cursive;
+    font-size: 80px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 120px;
+}
+
+.getStarted {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-self: center;
+    margin: 3%;
+    padding: 2% 10%;
+    font-size: 14px;
+}
+
+figure {
+    margin-left: 100px;
+    margin-right: 120px;
+}
+
+/*===============SECOND HALF=======================*/
+
+.borderStyle {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 5% 5.5%;
+    padding: 30px 0;
+}
+
+section {
+    display: flex;
+}
+
+.about {
+    /*
+    width: 49%;
+    padding-right: 3%;
+*/
+}
+
+.middle-img {
+    margin: 0 auto;
+    width: 100%;
+    padding: 35px 0;
+}
+
+.services,
+.product,
+.vision {
+    width: 33%;
+    padding-right: 4%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    float: right;
+}
+
+/*=======================COPYRIGHT==================*/
+
+.copyright {
+    text-align: center;
+    margin: 7%;
+}
+
+/*================= END OF MAIN PAGE ==================/
+
+/*============= SERVICE PAGE CSS START ===============*/
+
+
+.imgHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.imgHeader div h2 {
+    font-size: 25px;
+}
+
+.wrap {
+    display: flex;
+    flex-flow: wrap;
+    margin: 0 3.3%;
+    /*
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 95%;
+    margin: 0% auto;
+*/
+}
+
+hr {
+    width: 88%;
+    padding: 4
+}
+
+.wrap div {
+    display: flex;
+    flex-direction: column;
+
+    width: 44%;
+    border: 1px solid black;
+    padding: 2%;
+    margin: 3%;
+    background-color: lightgrey
+}
+
+button {
+    text-align: center;
+    width: 35%;
+    padding-left: 4%;
+    margin-top: 10px;
+    padding: 2% 0;
+}
+
+/*
+section.wrap2 div{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+*/
+
+
+.wrap2 {
+    margin: 2% 6%;
+    padding-top: 2%;
+}
+
+ul.list {
+    list-style-type: square;
+    line-height: normal;
+
+    padding-left: 4%;
+    padding-top: 5%;
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    text-align: left;*/
+}
+
+
+
+/*
+.wrap div p, .wrap div h3{
+    padding: 5%;
+}
+*/
+
+/*=========== Responsive Project CSS ==============*/
+
+@media (max-width: 800px) {
+    .topTitle{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .logo{
+        padding: 0;
+        padding-top: 16%;
+        
+    }
+    nav {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+
+    }
+
+    figure {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        padding: 5% 0;
+        margin: 0;
+    }
+
+    aside {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*========= 500px DISPLAY===========================*/
+@media (max-width: 500px) {
+    .topTitle{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    nav {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+
+/*
+    
+      nav {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+        align-items: flex-start;
+        justify-content: space-between;
+
+    }
+    
+*/
+    
+    nav a {
+        display: flex;
+        align-self: center;
+        padding: 2% 0;
+    }
+
+    .borderMenu {
+        display: flex;
+        border: 1px solid black;
+        padding: 0 50%;
+    }
+
+    .logo{
+        align-self: center;
+        padding-top: 15%;
+        padding-right: 0;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    figure {
+        display: none;
+    }
+
+    aside {
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .services,
+    .product,
+    .vision {
+        width: 100%;
+        padding-right: 4%;
+    }
+}
